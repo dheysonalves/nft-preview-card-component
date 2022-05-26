@@ -30,20 +30,23 @@
 **::after {
 	box-sizing: border-box;
 	font: inherit;
+	padding: 0;
+	border: 0;
+	margin: 0;
 }
 
 body {
 	font-size: var(--fs-base);
-	min-height: 100vh;
 	background-color: var(--clr-neutral-main-dark-blue);
 	font-family: "Outfit", sans-serif;
-	padding: 0;
-	border: 0;
 	vertical-align: baseline;
+	overflow: auto;
+	min-height: 100vh;
 }
 
 .main {
 	display: grid;
+	min-height: 100vh;
 }
 
 .card {
@@ -57,7 +60,7 @@ body {
 
 .card-header {
 	padding-bottom: 0.9rem;
-	border-bottom: 0.1px solid var(--clr-primary-soft-blue);
+	border-bottom: 0.1em solid var(--clr-primary-soft-blue);
 }
 
 .card-header--title {
@@ -104,7 +107,7 @@ body {
 .card-footer--img {
 	border: 1px solid var(--clr-white);
 	border-radius: 4em;
-	max-width: min(30px, 80%);
+	max-width: min(2em, 80%);
 }
 
 .card-footer--span {
