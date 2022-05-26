@@ -13,6 +13,8 @@
 	--clr-neutral-card-dark-blue: hsl(216, 50%, 16%);
 	--clr-dark-blue-line: hsl(215, 32%, 27%);
 	--clr-white: hsl(0, 0%, 100%);
+	--clr-neutral-dark-blue-opacity10: hsl(217, 54%, 10%);
+	--clr-neutral-dark-blue-55-opacity11: hsl(217, 55%, 11%);
 
 	/* TYPOGRAPHY */
 
@@ -58,7 +60,7 @@ body {
 	align-self: center;
 	justify-self: center;
 	max-width: max(20em, 10em);
-	box-shadow: 2px 0.8em 0em 0.8em hsl(217, 54%, 10%), 0.5em 0.5em 0em 2em hsl(217, 55%, 11%);
+	box-shadow: 2px 0.8em 0em 0.8em var(--clr-neutral-dark-blue-opacity10), 0.5em 0.5em 0em 2em var(--clr-neutral-dark-blue-55-opacity11);
 }
 
 .card-header {
