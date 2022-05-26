@@ -60,7 +60,8 @@ body {
 	align-self: center;
 	justify-self: center;
 	max-width: max(20em, 10em);
-	box-shadow: 2px 0.8em 0em 0.8em var(--clr-neutral-dark-blue-opacity10), 0.5em 0.5em 0em 2em var(--clr-neutral-dark-blue-55-opacity11);
+	box-shadow: 2px 0.8em 0em 0.8em var(--clr-neutral-dark-blue-opacity10),
+		0.5em 0.5em 0em 2em var(--clr-neutral-dark-blue-55-opacity11);
 }
 
 .card-header {
@@ -69,9 +70,17 @@ body {
 }
 
 .card-header--title {
-	color: var(--clr-white);
 	font-weight: var(--fw-600);
 	font-size: min(1.6rem, 2rem);
+}
+
+.card-header-title--anchor {
+	text-decoration: none;
+	color: var(--clr-white);
+}
+
+.card-header-title--anchor:hover {
+	color: var(--clr-primary-cyan);
 }
 
 .card-header--subtitle {
@@ -127,8 +136,18 @@ body {
 	text-decoration: none;
 }
 
-.card-footer--anchor:active {
-	text-decoration: underline;
+.card-footer--anchor:hover {
+	color: var(--clr-primary-cyan);
+}
+
+.card-image {
+	position: relative;
+	cursor: pointer;
+}
+
+.card-image:hover .overlay {
+	opacity: 1;
+	border-radius: 0.5em;
 }
 
 .equilibrium-image {
@@ -137,10 +156,26 @@ body {
 	border-radius: 0.5em;
 }
 
-.attribution {
-	font-size: 11px;
-	text-align: center;
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: 0.3s ease;
+	background-color: var(--clr-primary-cyan);
 }
-.attribution a {
-	color: hsl(228, 45%, 44%);
+
+.icon {
+	color: var(--clr-white);
+	font-size: 100px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
 }
