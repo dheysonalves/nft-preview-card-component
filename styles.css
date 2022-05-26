@@ -1,0 +1,45 @@
+:root {
+	/* LAYOUT */
+
+	--lyt-mobile: 375px;
+	--lyt-desktop: 1440px;
+
+	--lyt-mobile-em: 40em;
+
+	/* COLORS */
+	--clr-primary-soft-blue: hsl(215, 51%, 70%);
+	--clr-primary-cyan: hsl(178, 100%, 50%);
+	--clr-neutral-main-dark-blue: hsl(217, 54%, 11%);
+	--clr-neutral-card-dark-blue: hsl(216, 50%, 16%);
+	--clr-dark-blue-line: hsl(215, 32%, 27%);
+	--clr-white: hsl(0, 0%, 100%);
+
+	/* TYPOGRAPHY */
+
+	--fs-base: clamp(1.125rem, 1vw + 1rem, 2.25rem);
+
+	/* FONT */
+	--ff-outfit: "Outfit", sans-serif;
+	--fw-300: 300;
+	--fw-400: 400;
+	--fw-600: 600;
+}
+
+*,
+**::before,
+**::after {
+	box-sizing: border-box;
+}
+
+body {
+	font-size: var(--fs-base);
+	min-height: 100vh;
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
