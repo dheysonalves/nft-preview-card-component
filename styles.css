@@ -16,7 +16,7 @@
 
 	/* TYPOGRAPHY */
 
-	--fs-base: clamp(1.125rem, 1vw + 1rem, 2.25rem);
+	--fs-base: clamp(1.125rem, 1vw + 0.1rem, 2rem);
 
 	/* FONT */
 	--ff-outfit: "Outfit", sans-serif;
@@ -29,11 +29,104 @@
 **::before,
 **::after {
 	box-sizing: border-box;
+	font: inherit;
 }
 
 body {
 	font-size: var(--fs-base);
 	min-height: 100vh;
+	background-color: var(--clr-neutral-main-dark-blue);
+	font-family: "Outfit", sans-serif;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+.main {
+	display: grid;
+}
+
+.card {
+	background-color: var(--clr-neutral-card-dark-blue);
+	border-radius: 0.8em;
+	padding: min(1.2em, 1.4em);
+	margin: min(1em, 0.5em);
+	align-self: center;
+	justify-self: center;
+}
+
+.card-header {
+	padding-bottom: 0.9rem;
+	border-bottom: 0.1px solid var(--clr-primary-soft-blue);
+}
+
+.card-header--title {
+	color: var(--clr-white);
+	font-weight: var(--fw-600);
+	font-size: min(1.6rem, 2rem);
+}
+
+.card-header--subtitle {
+	color: var(--clr-primary-soft-blue);
+	font-weight: var(--fw-300);
+}
+
+.card-header-info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.card-header-info--eth {
+	text-align: center;
+}
+
+.card-info--img {
+	max-width: 100%;
+}
+
+.card-info-days--span {
+	color: var(--clr-primary-soft-blue);
+	font-size: clamp(1rem, 1rem);
+}
+
+.card-info-eth--span {
+	color: var(--clr-primary-cyan);
+	font-size: clamp(1rem, 1rem);
+}
+
+.card-footer {
+	display: flex;
+	align-items: center;
+	margin-top: 1em;
+}
+
+.card-footer--img {
+	border: 1px solid var(--clr-white);
+	border-radius: 4em;
+	max-width: min(30px, 80%);
+}
+
+.card-footer--span {
+	padding-left: 0.8em;
+	color: var(--clr-primary-soft-blue);
+	font-weight: var(--fw-300);
+	font-size: clamp(1rem, 0.8rem, 1rem);
+}
+
+.card-footer--anchor {
+	color: var(--clr-white);
+	text-decoration: none;
+}
+
+.card-footer--anchor:active {
+	text-decoration: underline;
+}
+
+.equilibrium-image {
+	max-width: 100%;
+	margin: auto;
+	border-radius: 0.5em;
 }
 
 .attribution {
